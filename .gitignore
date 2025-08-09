@@ -1,0 +1,12 @@
+#Node
+
+node_nodules/
+
+# Build
+
+dist/
+bulid/
+
+# Logs
+npm-debug.log*
+pnpm-debug.log*
