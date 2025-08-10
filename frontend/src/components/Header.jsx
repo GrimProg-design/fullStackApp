@@ -16,6 +16,11 @@ export default function Header() {
             Go to more
           </Link>
         </div>
+        <div>
+          <Link to="/products" className="links-button">
+            Products
+          </Link>
+        </div>
       </nav>
       <hr></hr>
     </div>

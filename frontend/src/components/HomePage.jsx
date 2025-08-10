@@ -12,9 +12,7 @@ export default function HomePage() {
 
   return (
     <>
-      <Link to="/home">
-        <h1>{data || "Loading..."}</h1>
-      </Link>
+      <h1>{data || "Loading..."}</h1>
     </>
   );
 }

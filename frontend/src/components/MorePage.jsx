@@ -12,9 +12,7 @@ export default function MorePage() {
 
   return (
     <>
-      <Link to="/more">
-        <h1>{data || "Loading..."}</h1>
-      </Link>
+      <h1>{data || "Loading..."}</h1>
     </>
   );
 }

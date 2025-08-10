@@ -1,22 +1,30 @@
 .nav-container {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .buttons-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .links-button {
-    all: unset;
-    display: inline-block;
-    width: 200px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border: 1px solid silver;
-    border-radius: 10px;
-    cursor: pointer;
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 0;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+  margin-right: 20px;
+  font-weight: 600;
+  box-shadow: 5px 5px 10px #9798a0, -5px -5px 12px #ffffff;
+}
+
+.links-button:hover {
+  box-shadow: inset 3px 3px 7px #9798a0, inset -3px -3px 9px #fff;
 }

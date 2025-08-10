@@ -6,6 +6,10 @@ const PORT = 3000;
 const moreRouter = require("./controllers/more");
 const mongoose = require("mongoose");
 
+const productRoutes = require("./routes/fruitRoutes");
+
+app.use("/api/products", productRoutes);
+
 mongoose.connect("mongodb://127.0.0.1:27017/fullstack_web_site", {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -19,23 +23,6 @@ app.use("/api/more", moreRouter)
 app.get("/api/home", (req, res) => {
     res.send("Home page")
 })
-
-
-const News = mongoose.model("News", new mongoose.Schema({
-  title: String,
-  content: String
-}));
-
-app.get("/add-news", async (req, res) => {
-  const news = new News({ title: "Тестовая новость", content: "Проверка" });
-  await news.save();
-  res.send("Новость добавлена!");
-});
-
-app.get("/all-news", async (req, res) => {
-  const newsList = await News.find();
-  res.json(newsList);
-});
 
 
 app.listen(PORT, () => {
