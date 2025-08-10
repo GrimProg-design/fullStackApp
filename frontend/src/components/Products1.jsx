@@ -14,12 +14,11 @@ export default function Products() {
   return (
     <>
       <div className="header-of-title">
-        <h1>Fruit:</h1>
-        <Link to="/products/addProduct" className="link-to-addProductForm">Add product</Link>
+        <h1>Tasks:</h1>
+        <Link to="/products/addProduct" className="link-to-addProductForm">Add task</Link>
       </div>
       <article>
         <h2 className="title">{value[0]?.name}</h2>
-        <img src={value[0]?.url} />
         <p>{value[0]?.description}</p>
       </article>
       <Link to="/products"></Link>

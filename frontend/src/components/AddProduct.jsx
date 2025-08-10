@@ -1,31 +1,47 @@
 import "../styles/addProduct.css";
+import { useState } from "react";
 
 export default function AddProduct() {
+    const [form, setForm] = useState();
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+
+    fetch("/api/products/addProduct", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.text())
+      .then((data) => setForm(data))
+      .catch((err) => console.error(err));
+  }
+
   return (
     <div className="wrapper-for-form">
-      <form action="/api/products/addProduct" method="post">
+      <form onSubmit={handleSubmit}>
         <h2>Add your own product</h2>
         <div>
-          <label htmlFor="name-inp">Enter name of product</label>
-          <input type="text" name="name-inp" id="name-inp" placeholder="Name" />
+          <label htmlFor="name-inp">Enter task</label>
+          <input type="text" name="task" id="name-inp" placeholder="Task" />
         </div>
         <div>
-          <label htmlFor="description-inp">Enter description:</label>
-          <input
+          <label htmlFor="description-inp">Enter description of task:</label>
+          <textarea
             type="text"
-            name="desc-inp"
+            name="desc"
             id="desc-inp"
             placeholder="description"
-          />
-        </div>
-        <div>
-          <label htmlFor="url-inp">Enter URL for picture:</label>
-          <input type="text" name="url-inp" id="url-inp" placeholder="URL" />
+          ></textarea>
         </div>
         <div className="button-div">
-            <button>Submit</button>
+          <button type="submit">Submit</button>
         </div>
       </form>
+      <h3 className="responce">{form}</h3>
     </div>
   );
 }

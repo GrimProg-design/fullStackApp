@@ -18,7 +18,7 @@ export default function Header() {
         </div>
         <div>
           <Link to="/products" className="links-button">
-            Products
+            Tasks
           </Link>
         </div>
       </nav>
