@@ -1,28 +1,36 @@
-import { Link } from "react-router-dom";
 import "../styles/header.css";
+import Buttons from "./buttonForHeder";
+import { useState } from "react";
 
 export default function Header() {
+  const [isActive, setIsActive] = useState("btn1");
+
   return (
-    <div>
+    <div className="main-header">
       <h1>Header</h1>
       <nav className="nav-container">
-        <div className="buttons-div">
-          <Link to="/home" className="links-button">
-            Go to home
-          </Link>
-        </div>
-        <div className="buttons-div">
-          <Link to="/more" className="links-button">
-            Go to more
-          </Link>
-        </div>
-        <div>
-          <Link to="/products" className="links-button">
-            Tasks
-          </Link>
-        </div>
+        <Buttons
+          id="btn1"
+          value="Home"
+          activeId={isActive}
+          direction="/home"
+          onClick={setIsActive}
+        />
+        <Buttons
+          id="btn2"
+          value="More"
+          activeId={isActive}
+          direction="/more"
+          onClick={setIsActive}
+        />
+        <Buttons
+          id="btn3"
+          value="Tasks"
+          activeId={isActive}
+          direction="/products"
+          onClick={setIsActive}
+        />
       </nav>
-      <hr></hr>
     </div>
   );
 }

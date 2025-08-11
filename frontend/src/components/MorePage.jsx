@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import '../styles/body-main.css'
 import { useState, useEffect } from "react";
 
 export default function MorePage() {
@@ -11,8 +11,8 @@ export default function MorePage() {
   }, []);
 
   return (
-    <>
+    <div className='wrapper-main'>
       <h1>{data || "Loading..."}</h1>
-    </>
+    </div>
   );
 }

@@ -1,3 +1,14 @@
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px #9798a0, -5px -5px 12px #ffffff;
+  padding: 20px;
+}
+
 .nav-container {
   display: flex;
   gap: 10px;
@@ -23,8 +34,4 @@
   margin-right: 20px;
   font-weight: 600;
   box-shadow: 5px 5px 10px #9798a0, -5px -5px 12px #ffffff;
-}
-
-.links-button:hover {
-  box-shadow: inset 3px 3px 7px #9798a0, inset -3px -3px 9px #fff;
 }

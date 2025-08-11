@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import "../styles/body-main.css"
 
 export default function HomePage() {
   const [data, setData] = useState();
@@ -11,8 +11,8 @@ export default function HomePage() {
   }, []);
 
   return (
-    <>
+    <div className="wrapper-main">
       <h1>{data || "Loading..."}</h1>
-    </>
+    </div>
   );
 }

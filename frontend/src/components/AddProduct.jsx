@@ -23,16 +23,16 @@ export default function AddProduct() {
   return (
     <div className="wrapper-for-form">
       <form onSubmit={handleSubmit}>
-        <h2>Add your own product</h2>
+        <h2>Add your own task</h2>
         <div>
           <label htmlFor="name-inp">Enter task</label>
-          <input type="text" name="task" id="name-inp" placeholder="Task" />
+          <input type="text" name="name" id="name-inp" placeholder="Task" />
         </div>
         <div>
           <label htmlFor="description-inp">Enter description of task:</label>
           <textarea
             type="text"
-            name="desc"
+            name="description"
             id="desc-inp"
             placeholder="description"
           ></textarea>
