@@ -8,3 +8,8 @@
   box-shadow: 5px 5px 10px #9798a0, -5px -5px 12px #ffffff;
   padding: 20px;
 }
+
+.home-text {
+  font-size: 1.3em;
+  width: 60%;
+}

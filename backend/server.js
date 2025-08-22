@@ -13,6 +13,10 @@ const productRoutes = require("./routes/taskRoutes");
 
 app.use("/api/products", productRoutes);
 
+// Подключение pug
+app.set("view engine", "pug");
+app.set("views", "./views");
+
 mongoose
   .connect("mongodb://127.0.0.1:27017/fullstack_web_site", {
     useNewUrlParser: true,

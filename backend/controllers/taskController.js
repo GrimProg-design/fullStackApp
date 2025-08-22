@@ -29,4 +29,15 @@ const deleteProduct = async (req, res) => {
   }
 }
 
-module.exports = { getProducts, postProducts, deleteProduct };
+const changeProduct = async (req, res) => {
+  const { id } = req.params;
+  const { done } = req.body;
+  try {
+    await Product.update(id, { done });
+    res.sendd("Everything is okay bro");
+  } catch (err) {
+    res.status(500).json({message: "Ошибка при обновлении"})
+  }
+}
+
+module.exports = { getProducts, postProducts, deleteProduct, changeProduct };

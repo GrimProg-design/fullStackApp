@@ -74,9 +74,20 @@ img {
   font-weight: bold;
 }
 
+.buttons {
+  display: flex;
+  gap: 30px;
+}
+
 .delete-button {
   background-color: rgba(255, 127, 110, 0.3);
-  margin-top: 30%;
+  margin-top: 40%;
+  width: 100px;
+}
+
+.change-button {
+  margin-top: 40%;
+  width: 100px;
 }
 
 .task-item p {
@@ -84,4 +95,21 @@ img {
   word-wrap: break-word; 
   overflow-wrap: break-word;
   word-break: break-word;
+}
+#title-input {
+  margin: 30px;
+}
+
+.back-button {
+  width: 100px;
+  margin-top: 20%;
+}
+
+.send-change {
+  margin-top: 20%;
+  background-color: rgba(110, 255, 197, 0.3);
+}
+
+.change-form {
+  box-shadow: none;
 }
