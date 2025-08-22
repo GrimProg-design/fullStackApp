@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const PORT = 3000;
+require("dotenv").config();
+
+const PORT = process.env.PORT || 3000;
+const MONGO_URI = process.env.MONGO_URI;
 
 app.use(express.json());
 app.use(cors());
@@ -18,7 +21,7 @@ app.set("view engine", "pug");
 app.set("views", "./views");
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/fullstack_web_site", {
+  .connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
